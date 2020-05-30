@@ -18,4 +18,8 @@
     <string name="mensaje_guardado_correcto">Mensaje Guardado Exitosamente</string>
     <string name="detalle_persona">DETALLE PERSONA</string>
     <string name="etiqueta_boton_eliminar">Eliminar</string>
+    <string name="titulo_eliminar">Eliminar Persona</string>
+    <string name="pregunta_mensaje_eliminar">¿Esta seguro que desea eliminar esta persona?</string>
+    <string name="opcion_si">Si</string>
+    <string name="opcion_no">No</string>
 </resources>

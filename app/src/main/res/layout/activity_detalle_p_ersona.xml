@@ -33,6 +33,7 @@
             android:id="@+id/menu_item"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:onClick="eliminar"
             android:src="@android:drawable/ic_menu_delete"
             fab:fab_label="Menu item 1"
             fab:fab_size="mini" />
