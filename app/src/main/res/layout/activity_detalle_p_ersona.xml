@@ -50,8 +50,7 @@
                 <TextView
                     android:id="@+id/lblCedulaDetalle"
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="TextView" />
+                    android:layout_height="wrap_content" />
             </TableRow>
 
             <TableRow
@@ -70,8 +69,7 @@
                 <TextView
                     android:id="@+id/lblNombreDetalle"
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="TextView" />
+                    android:layout_height="wrap_content" />
             </TableRow>
 
             <TableRow
@@ -88,10 +86,9 @@
                     android:textStyle="bold" />
 
                 <TextView
-                    android:id="@+id/lblApellido DEtalle"
+                    android:id="@+id/lblApellidoDetalle"
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="TextView" />
+                    android:layout_height="wrap_content" />
             </TableRow>
 
         </TableLayout>
