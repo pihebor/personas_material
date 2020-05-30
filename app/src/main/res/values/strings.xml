@@ -12,8 +12,8 @@
     <string name="tituo_agregar">AGREGAR PERSONAS</string>
     <string name="cedula">Cédula</string>
     <string name="nombre">Nombre</string>
-    <string name="nombre">Nombre</string>
     <string name="apellido">Apellido</string>
     <string name="guardar">GUARDAR</string>
     <string name="limpiar">LIMPIAR</string>
+    <string name="mensaje_guardado_correcto">Mensaje Guardado Exitosamente</string>
 </resources>
