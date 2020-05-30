@@ -17,4 +17,5 @@
     <string name="limpiar">LIMPIAR</string>
     <string name="mensaje_guardado_correcto">Mensaje Guardado Exitosamente</string>
     <string name="detalle_persona">DETALLE PERSONA</string>
+    <string name="etiqueta_boton_eliminar">Eliminar</string>
 </resources>

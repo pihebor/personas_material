@@ -13,6 +13,7 @@ public class DetallePErsona extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_detalle_p_ersona);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
         ImageView foto;
         TextView cedula, nombre, apellido;
