@@ -68,8 +68,9 @@ public class AgregarPersona extends AppCompatActivity {
         cedula.requestFocus();
     }
 
-    public void onBackPresed(){
+    public void onBackPressed(){
         finish();
         Intent i = new Intent(AgregarPersona.this, MainActivity.class);
+        startActivity(i);
     }
 }
