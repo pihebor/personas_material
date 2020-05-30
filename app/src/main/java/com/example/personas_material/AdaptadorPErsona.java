@@ -16,7 +16,8 @@ import java.util.ArrayList;
 public class AdaptadorPErsona extends RecyclerView.Adapter<AdaptadorPErsona.PersonaViewHolder>{
     private ArrayList<Persona> personas ;
 
-    public AdaptadorPErsona(ArrayList<Persona> prsonas){
+    public AdaptadorPErsona(ArrayList<Persona> personas){
+
         this.personas = personas;
     }
 
