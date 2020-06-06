@@ -4,12 +4,16 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Context;
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
 import android.view.inputmethod.InputMethodManager;
 import android.widget.EditText;
 
 import com.google.android.material.snackbar.Snackbar;
+import com.google.firebase.storage.FirebaseStorage;
+import com.google.firebase.storage.StorageReference;
+import com.google.firebase.storage.UploadTask;
 
 import java.util.ArrayList;
 import java.util.Random;
@@ -17,6 +21,7 @@ import java.util.Random;
 public class AgregarPersona extends AppCompatActivity {
     private ArrayList<Integer> fotos;
     private EditText cedula, nombre, apellido;
+    private StorageReference storageReference;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -32,6 +37,15 @@ public class AgregarPersona extends AppCompatActivity {
         fotos.add(R.drawable.images2);
         fotos.add(R.drawable.images3);
 
+        storageReference = FirebaseStorage.getInstance().getReference();
+
+
+    }
+
+    public void subir_foto(String id,int foto){
+        StorageReference child = storageReference.child(id);
+        Uri uri = Uri.parse("android.resource://"+R.class.getPackage().getName()+"/"+foto);
+        UploadTask uploadTask = child.putFile(uri);
     }
 
     public void guardar(View v){
@@ -46,6 +60,7 @@ public class AgregarPersona extends AppCompatActivity {
         foto = foto_aleatoria();
         persona =  new Persona(ced, nom, apell, foto, id);
         persona.guardar();
+        subir_foto(id, foto);
         limpiar();
         imp.hideSoftInputFromWindow(cedula.getWindowToken(), 0);
         Snackbar.make(v, getString(R.string.mensaje_guardado_correcto),Snackbar.LENGTH_LONG).show();
