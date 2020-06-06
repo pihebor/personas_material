@@ -16,6 +16,7 @@ import androidx.appcompat.widget.Toolbar;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.util.Log;
 import android.view.View;
 
 import java.util.ArrayList;
@@ -54,7 +55,8 @@ public class MainActivity extends AppCompatActivity implements AdaptadorPErsona.
             personas.clear();
             if (dataSnapshot.exists()){
                 for(DataSnapshot snapshot: dataSnapshot.getChildren()){
-                    Persona p = dataSnapshot.getValue(Persona.class);
+                    Persona p = snapshot.getValue(Persona.class);
+                    Log.d("nombre persona", p.getNombre());
                     personas.add(p);
                 }
             }
